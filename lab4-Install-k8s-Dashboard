@@ -5,3 +5,10 @@ $ chmod 700 get_helm.sh
 $ ./get_helm.sh
 
 $ helm version
+
+# Add Kubernetes Dashboard Helm Repository
+
+$ helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
+$ helm repo list
+
+# Install Kubernetes Dashboard
