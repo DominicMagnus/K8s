@@ -1,34 +1,7 @@
-sudo apt update
-sudo apt upgrade
-sudo apt install apt-transport-https curl
+sudo hostnamectl set-hostname "master1.dev.ops"
 
+Add the following entries in /etc/hosts file on each node
 
-###
-
-sudo apt install docker.io
-
-sudo systemctl enable docker
-sudo systemctl start docker
-
-docker --version
-
-### k8s install
-# add key
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
-
-# add repo
-sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
-
-# install
-sudo apt install kubeadm kubelet kubectl kubernetes-cni
-
-### Disable swap
-
-sudo swapoff -a
-sudo nano /etc/fstab
-
-# comment last line: #/swap.img      none    swap    sw      0       0
-
-### config
-
-sudo kubeadm init
+192.168.77.121  master1.dev.ops
+192.168.77.122  worker1.dev.ops
+192.168.77.123  worker2.dev.ops
