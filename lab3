@@ -1,1 +1,24 @@
+Install Calico Network Plugin
+$ kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
 
+# Verify the status of pods in kube-system namespace
+$ kubectl get pods -n kube-system
+
+
+# Check the nodes status as well.
+$ kubectl get nodes
+
+### Test Your Kubernetes Cluster Installation ###
+
+# for one node
+$ kubectl create deployment nginx-app --image=nginx --replicas=1
+
+# for 2 nodes
+$ kubectl create deployment nginx-app --image=nginx --replicas=2
+
+# Check the status of nginx-app deployment
+
+$ kubectl get deployment nginx-app
+NAME        READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-app   2/2     2            2           68s
+$
