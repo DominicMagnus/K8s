@@ -95,3 +95,18 @@ $ sudo apt-mark hold kubelet kubeadm kubectl
 # Initialize Kubernetes Cluster with Kubeadm
 
 $ sudo kubeadm init --control-plane-endpoint=master1.dev.ops
+
+# Right output: "Your Kubernetes control-plane has initialized successfully!"
+# save all output to text file
+
+
+# So, to start interacting with cluster, run following commands on the master node:
+
+$ mkdir -p $HOME/.kube
+$ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+$ sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+# next, try to run following kubectl commands to view cluster and node status
+
+$ kubectl cluster-info
+$ kubectl get nodes
