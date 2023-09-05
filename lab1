@@ -1,3 +1,4 @@
+### PRESET ###
 sudo hostnamectl set-hostname "master1.dev.ops"
 exec bash
 
@@ -34,3 +35,6 @@ EOF
 # Reload the above changes, run
 
 $ sudo sysctl --system
+
+### SECOND-PART ###
+
