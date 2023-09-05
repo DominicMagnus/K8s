@@ -14,6 +14,9 @@ First Worker Node:  192.168.77.122 – worker1.dev.ops
 Second Worker Node:  192.168.77.123 – worker2.dev.ops
 
 ### PRESET ###
+$ sudo apt update
+$ sudo apt upgrade
+
 sudo hostnamectl set-hostname "master1.dev.ops"
 exec bash
 
