@@ -22,3 +22,16 @@ $ kubectl get deployment nginx-app
 NAME        READY   UP-TO-DATE   AVAILABLE   AGE
 nginx-app   2/2     2            2           68s
 $
+
+# Expose the deployment as NodePort
+$ kubectl expose deployment nginx-app --type=NodePort --port=80
+service/nginx-app exposed
+$
+
+# Run following commands to view service status
+
+$ kubectl get svc nginx-app
+$ kubectl describe svc nginx-app
+
+# Use following curl command to access nginx based application,
+$ curl http://<woker-node-ip-addres>:31246
