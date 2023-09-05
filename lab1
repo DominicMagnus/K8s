@@ -1,7 +1,13 @@
 sudo hostnamectl set-hostname "master1.dev.ops"
+exec bash
 
-Add the following entries in /etc/hosts file on each node
+
+# Add the following entries in /etc/hosts file on each node
 
 192.168.77.121  master1.dev.ops
 192.168.77.122  worker1.dev.ops
 192.168.77.123  worker2.dev.ops
+
+# Disable swap & Add kernel Parameters
+sudo swapoff -a
+sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
