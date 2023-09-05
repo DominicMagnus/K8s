@@ -1,3 +1,18 @@
+### Prerequisites for lab ###
+In this guide, we are using one master node and two worker nodes. Following are system requirements on each node,
+
+Minimal install Ubuntu 22.04
+Minimum 2GB RAM or more
+Minimum 2 CPU cores / or 2 vCPU
+20 GB free disk space on /var or more
+Sudo user with admin rights
+Internet connectivity on each node
+
+### Lab Setup ###
+Master Node:  192.168.77.121– master1.dev.ops
+First Worker Node:  192.168.77.122 – worker1.dev.ops
+Second Worker Node:  192.168.77.123 – worker2.dev.ops
+
 ### PRESET ###
 sudo hostnamectl set-hostname "master1.dev.ops"
 exec bash
