@@ -12,3 +12,24 @@ $ helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
 $ helm repo list
 
 # Install Kubernetes Dashboard
+$ helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --create-namespace --namespace kubernetes-dashboard
+
+# get list
+kubectl get pods -n kubernetes-dashboard
+
+# So, in order to access dashboard, run
+### LOCAL !!!! #### kubectl -n kubernetes-dashboard port-forward svc/kubernetes-dashboard-nginx-controller 8443:443
+$ kubectl -n kubernetes-dashboard port-forward --address 192.168.77.121 pod/kubernetes-dashboard-798dd48467-srq5m 8443:8443
+
+kubectl -n kubernetes-dashboard port-forward svc/kubernetes-dashboard 8443:443
+
+
+### (Optional)
+
+kubectl config set-context --current --namespace=kubernetes-dashboard
+
+
+
+
+
+
