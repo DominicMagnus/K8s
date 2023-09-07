@@ -2,3 +2,8 @@ kubectl get nodes
 kubectl describe node <node-name>
 journalctl -u kubelet
 systemctl restart kubelet
+
+#  show pods belonging to the Kubernetes system
+kubectl get pods -n kube-system
+
+journalctl -u kubelet
