@@ -7,3 +7,6 @@ systemctl restart kubelet
 kubectl get pods -n kube-system
 
 journalctl -u kubelet
+
+
+kubectl get namespaces
